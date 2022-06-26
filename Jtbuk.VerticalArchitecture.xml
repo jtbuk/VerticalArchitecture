@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Jtbuk.VerticalArchitecture</name>
+    </assembly>
+    <members>
+        <member name="T:Jtbuk.VerticalArchitecture.Features.Weather.Actions.CreateWeatherReportDto">
+            <example>
+            {
+              "location": {
+                "latitude": 51.5072,
+                "longitude": 0.1276
+              },
+              "temperatureInCelcius": 26,
+              "precipitation": 60,
+              "windMph": 18
+            }
+            </example>
+        </member>
+        <member name="M:Jtbuk.VerticalArchitecture.Features.Weather.Actions.CreateWeatherReportDto.#ctor(Jtbuk.VerticalArchitecture.Common.Dto.Location,System.Double,System.Int32,System.Int32)">
+            <example>
+            {
+              "location": {
+                "latitude": 51.5072,
+                "longitude": 0.1276
+              },
+              "temperatureInCelcius": 26,
+              "precipitation": 60,
+              "windMph": 18
+            }
+            </example>
+        </member>
+    </members>
+</doc>
