@@ -1,4 +1,6 @@
 ﻿using Jtbuk.VerticalArchitecture.Features.Weather.Entities;
+using Microsoft.AspNetCore.Mvc;
+using static Jtbuk.VerticalArchitecture.Features.Weather.WeatherSetup;
 
 namespace Jtbuk.VerticalArchitecture.Features.Weather.Actions;
 
@@ -8,7 +10,7 @@ public record UpdateWeatherReportDto(
     int Precipitation,
     int WindMph);
 
-public class UpdateWeatherReportAction
+public static class UpdateWeatherReportAction
 {    
     public static async Task Invoke(int id, CreateWeatherReportDto dto, WeatherContext context)
     {

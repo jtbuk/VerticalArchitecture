@@ -1,6 +1,6 @@
 ﻿namespace Jtbuk.VerticalArchitecture.Features.Weather.Actions;
 
-public class GetWeatherReportsAction
+public static class GetWeatherReportsAction
 {    
     public static async Task<List<GetWeatherReportDto>> Invoke(WeatherContext context)
     {

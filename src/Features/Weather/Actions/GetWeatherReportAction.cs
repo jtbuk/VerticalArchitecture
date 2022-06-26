@@ -1,5 +1,4 @@
-﻿using Jtbuk.VerticalArchitecture.Common.Exceptions;
-using Jtbuk.VerticalArchitecture.Features.Weather.Entities;
+﻿using Jtbuk.VerticalArchitecture.Features.Weather.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Jtbuk.VerticalArchitecture.Features.Weather.Actions;
@@ -10,7 +9,7 @@ public record GetWeatherReportDto(
     int Precipitation,
     int WindMph);
 
-public class GetWeatherReportAction
+public static class GetWeatherReportAction
 {    
     public static async Task<GetWeatherReportDto> Invoke([FromRoute] int id, WeatherContext context)
     {

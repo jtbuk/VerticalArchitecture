@@ -21,7 +21,7 @@ public record CreateWeatherReportDto(
     int WindMph);
 
 public class CreateWeatherReportAction
-{
+{    
     public static async Task<int> Invoke(CreateWeatherReportDto dto, WeatherContext context)
     {
         Debug.Assert(context != null, $"{nameof(context)} shouldn't be null");

@@ -1,4 +1,5 @@
-﻿using Jtbuk.VerticalArchitecture.Features.Weather.Actions;
+﻿using Jtbuk.VerticalArchitecture.Common.Swagger;
+using Jtbuk.VerticalArchitecture.Features.Weather.Actions;
 
 namespace Jtbuk.VerticalArchitecture.Features.Weather;
 
@@ -13,18 +14,10 @@ public static class WeatherSetup
     public static void UseWeatherFeature(this WebApplication app)
     {
         var featureTag = "Weather";
-        var route = "/api/weather";
-
-        app.MapPost(route, CreateWeatherReportAction.Invoke)
-           .WithTags(featureTag);
-
-        app.MapGet(route, GetWeatherReportsAction.Invoke)
-           .WithTags(featureTag);
-
-        app.MapGet($"{route}/{{id}}", GetWeatherReportAction.Invoke)
-           .WithTags(featureTag);
-
-        app.MapPut(route, UpdateWeatherReportAction.Invoke)
-           .WithTags(featureTag);
+        
+        app.Get("/api/weather", GetWeatherReportsAction.Invoke, featureTag);
+        app.Post("/api/weather", CreateWeatherReportAction.Invoke, featureTag);
+        app.Get("/api/weather/{id}", GetWeatherReportAction.Invoke, featureTag);
+        app.Put("/api/weather", UpdateWeatherReportAction.Invoke, featureTag);
     }
 }
