@@ -1,5 +1,4 @@
 ﻿using Jtbuk.VerticalArchitecture.Features.Weather.Entities;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Jtbuk.VerticalArchitecture.Features.Weather.Actions;
 

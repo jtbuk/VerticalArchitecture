@@ -21,4 +21,6 @@ global using Jtbuk.VerticalArchitecture.Common.Exceptions;
 
 #if DEBUG
 global using Xunit;
+global using FluentAssertions;
+global using Jtbuk.VerticalArchitecture.TestHelpers;
 #endif
