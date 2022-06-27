@@ -8,7 +8,7 @@ public static class WeatherSetup
     public static void AddWeatherFeature(this WebApplicationBuilder builder)
     {
         var connectionString = builder.Configuration.GetConnectionString("WeatherConnection");        
-        builder.Services.AddDbContext<WeatherContext>(options => options.UseSqlServer(connectionString));
+        builder.Services.AddDbContext<WeatherContext>(options => options.UseSqlServer(connectionString));              
     }
 
     public static void UseWeatherFeature(this WebApplication app)

@@ -1,6 +1,14 @@
 ﻿namespace Jtbuk.VerticalArchitecture.Common.Exceptions;
 
-public class NotFoundException<TEntity> : Exception where TEntity : BaseEntity
+public abstract class NotFoundException : Exception
 {
-    public NotFoundException(int Id) : base($"{nameof(TEntity)} not found with the id {Id}"){}
+    public NotFoundException(string message) : base(message) { }
+
+    public CustomError ErrorObject => new(Message);
+}
+
+
+public class NotFoundException<TEntity> : NotFoundException where TEntity : BaseEntity
+{
+    public NotFoundException(int Id) : base($"{typeof(TEntity).Name} not found with the id {Id}") { }
 }

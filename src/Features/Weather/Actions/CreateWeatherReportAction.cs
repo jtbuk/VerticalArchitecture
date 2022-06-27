@@ -19,7 +19,7 @@ public record CreateWeatherReportDto(
     int Precipitation,
     int WindMph);
 
-public class CreateWeatherReportAction
+public static class CreateWeatherReportAction
 {    
     public static async Task<int> Invoke(CreateWeatherReportDto dto, WeatherContext context)
     {
